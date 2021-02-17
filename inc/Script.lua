@@ -1927,8 +1927,8 @@ send_key(msg.sender_user_id_,'   [قناة سورس : الشيطان](https://t.
 return false
 end
 
-if MsgText[1]== "مطور السورس" then
-local inline = {{{text="-مطور السورس ",url="https://t.me/elbob_x"}}}
+if MsgText[1]== "قناة السورس" and msg.type == "pv" then
+		
 send_key(msg.sender_user_id_,'   [اهلا بك في سورس الشيطان للمساعده رسلني](https://t.me/elbob_x)' ,nil,inline,msg.id_)
 return false
 end
@@ -2349,20 +2349,20 @@ return [[
 ]]
 end
 
-if text == 'السورس' or text == 'سورس' or text == 'ياسورس' or text == 'يا سورس' then
-local Text =[[
-* 𓆩 𝒘𝒆𝒍𝒄𝒐𝒎𝒆 𝒕𝒐 𝒔𝒐𝒖𝒓𝒄𝒆 𝒗𝒊𝒑 𝒅𝒆𝒗𝒊𝒍𝒔 اهلا بك في سورس الشيطان  𓆪 *
+i if text == 'السورس' or text == 'سورس' or text == 'ياسورس' or text == 'يا سورس' then
+ local Text =[[
+ * 𓆩 𝒘𝒆𝒍𝒄𝒐𝒎𝒆 𝒕𝒐 𝒔𝒐𝒖𝒓𝒄𝒆 𝒗𝒊𝒑 𝒅𝒆𝒗𝒊𝒍𝒔 اهلا بك في سورس الشيطان  𓆪 *
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{
+{ {
 {text = 'قناه السورس', url="t.me/sourcedevils"},
 },
 {
 {text = 'مطور السـورس', url="t.me/elbob_x"},
 },
 }
-local msg_id = msg.id_/2097152/0.5
+local inline
 https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
 
