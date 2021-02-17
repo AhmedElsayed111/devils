@@ -1927,7 +1927,7 @@ send_key(msg.sender_user_id_,'   [قناة سورس : الشيطان](https://t.
 return false
 end
 
-if MsgText[1]== "مطور السورس" and msg.type == "pv" then
+if MsgText[1]== "مطور السورس" then
 local inline = {{{text="-مطور السورس ",url="https://t.me/elbob_x"}}}
 send_key(msg.sender_user_id_,'   [اهلا بك في سورس الشيطان للمساعده رسلني](https://t.me/elbob_x)' ,nil,inline,msg.id_)
 return false
