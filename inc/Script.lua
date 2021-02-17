@@ -2362,7 +2362,7 @@ keyboard.inline_keyboard = {
 {text = 'مطور السـورس', url="t.me/elbob_x"},
 },
 }
-local inline
+local inline = msg.id
 https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
 
