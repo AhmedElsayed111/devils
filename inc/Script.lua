@@ -2349,21 +2349,13 @@ return [[
 ]]
 end
 
- if text == 'السورس' or text == 'سورس' or text == 'ياسورس' or text == 'يا سورس' then
- local Text =[[
- * 𓆩 𝒘𝒆𝒍𝒄𝒐𝒎𝒆 𝒕𝒐 𝒔𝒐𝒖𝒓𝒄𝒆 𝒗𝒊𝒑 𝒅𝒆𝒗𝒊𝒍𝒔 اهلا بك في سورس الشيطان  𓆪 *
-]]
-keyboard = {} 
-keyboard.inline_keyboard = {
-{ {
-{text = 'قناه السورس', url="t.me/sourcedevils"},
-},
-{
-{text = 'مطور السـورس', url="t.me/elbob_x"},
-},
-}
-local msg_id = msg.id_/2097152/0.5	
-https.request("https://lue.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))		
+if MsgText[1] == "السورس" or MsgText[1]=="سورس" then
+return [[
+ѕᴏᴜʀᴄᴇᴅᴀɢɢᴇʀ𐇪
+⧴⧴⧴⧴⧴⧴⧴⧴⧴⧴
+ᴅᴇᴠ¹ ⤜ [˹ᴇʟʙᴏʙ𖤝.](t.me/Elbob_x)
+⧴⧴⧴⧴⧴⧴⧴⧴⧴⧴
+]]		
 end
 
 if MsgText[1] == "روايات" or MsgText[1]=="الروايات" then
