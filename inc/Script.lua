@@ -2349,13 +2349,13 @@ return [[
 ]]
 end
 
-if MsgText[1] == "السورس" or MsgText[1]=="سورس" then
-return [[
-ѕᴏᴜʀᴄᴇᴅᴀɢɢᴇʀ𐇪
-⧴⧴⧴⧴⧴⧴⧴⧴⧴⧴
-ᴅᴇᴠ¹ ⤜ [˹ᴇʟʙᴏʙ𖤝.](t.me/Elbob_x)
-⧴⧴⧴⧴⧴⧴⧴⧴⧴⧴
-]]		
+if text:match("^source$") or text:match("^اصدار$") or text:match("^الاصدار$") or  text:match("^السورس$") or text:match("^سورس$") and faeder11(msg) then 
+local inline = {
+{{text="- قناة السورس ،",url="t.me/Faeder_ch"},
+{text="- مبرمج السورس،",url="t.me/elbob_x"}},
+}
+send_inline(msg.chat_id_,'✟︙مرحبا بك في سورس الشيطان ┋ELBOB ،\n✟︙اضغط على الازرار بالاسفل ⬇️ ،',nil,inline) 
+return false 
 end
 
 if MsgText[1] == "روايات" or MsgText[1]=="الروايات" then
